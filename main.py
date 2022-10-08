@@ -33,7 +33,7 @@ def song_from_movie(url):
     for i in scrap:
         scrap_list.append(
             {"name": i.get('title').replace("Download", "").replace("320kbps", ""), 'link': base_url + i.get('href')})
-    return scrap_list
+    return {"songs":scrap_list}
 
 
 def song_trending_movie(url):
